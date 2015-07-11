@@ -1,8 +1,7 @@
-html,
-body {
-  font-family: 'PT Sans', sans-serif;
-  font-family: 'Oxygen', sans-serif;
-}
+/*
+ * @package css
+ * @author Svyatik Kovtun
+ */
 
 * {
   margin: 0;
@@ -12,49 +11,50 @@ body {
 .wrapper {
   width: 100%;
   height: 400px;
-  background-color: #bcffde;
   position: absolute;
   margin: auto;
   top: 0;
   bottom: 0;
 
   background: #29b8e5;
-  background: -moz-linear-gradient(-45deg, #29b8e5 0, #b3dced 100%);
   background: -webkit-linear-gradient(-45deg, #29b8e5 0, #b3dced 100%);
-  background: -ms-linear-gradient(-45deg, #29b8e5 0, #b3dced 100%);
-  background: linear-gradient(135deg, #29b8e5 0, #b3dced 100%);
+  background:    -moz-linear-gradient(-45deg, #29b8e5 0, #b3dced 100%);
+  background:     -ms-linear-gradient(-45deg, #29b8e5 0, #b3dced 100%);
+  background:         linear-gradient(135deg, #29b8e5 0, #b3dced 100%);
 
-  transition: height .4s;
+  -webkit-transition: height .4s;
+     -moz-transition: height .4s;
+          transition: height .4s;
 }
 
 .container {
-  margin: auto;
+  margin: 80px auto;
   text-align: center;
   width: 300px;
   position: absolute;
   z-index: 2;
-
-  top: 0;
-  bottom: 0;
   right: 0;
   left: 0;
-
-  margin-top: 80px;
 }
 
 .welcome {
   color: white;
   font-size: 2em;
   position: relative;
-  transition: top .8s;
   cursor: context-menu;
+  font-family: 'Oxygen', sans-serif;
   top: 0;
+
   -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  -webkit-transition: top .8s;
+     -moz-transition: top .8s;
+          transition: top .8s;
 }
 
 .welc-down {
@@ -63,8 +63,11 @@ body {
 
 .login-form {
   opacity: 1;
-  transition: visibility .6s, opacity .6s;
   margin-top: 10px;
+
+  -webkit-transition: visibility .6s, opacity .6s;
+     -moz-transition: visibility .6s, opacity .6s;
+          transition: visibility .6s, opacity .6s;
 }
 
 .form-disable {
@@ -82,6 +85,12 @@ body {
   }
 }
 
+
+/**
+ * BT
+ * Set style for all bt elements
+ */
+
 .bt {
   border: 1px solid rgba(255,255,255,.5);
   border-radius: 3px;
@@ -91,9 +100,21 @@ body {
   margin: 5px 0;
   width: 80%;
   text-align: center;
-  transition: width .4s, background-color .2s;
-  box-sizing: border-box;
+
+  -webkit-transition: width .4s, background-color .2s;
+     -moz-transition: width .4s, background-color .2s;
+          transition: width .4s, background-color .2s;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+
+/**
+ * BT-TEXT
+ * Set style for bt-text elements
+ */
 
 .bt-text {
   background-color: rgba(255,255,255,.3);
@@ -120,14 +141,45 @@ body {
   font-size: .8em;
 }
 
+.bt-text::-moz-placeholder {
+  color: rgba(255,255,255,.6);
+  font-size: .8em;
+}
+
+.bt-text:-ms-input-placeholder {
+  color: rgba(255,255,255,.6);
+  font-size: .8em;
+}
+
+.bt-text:-moz-placeholder {
+  color: rgba(255,255,255,.6);
+  font-size: .8em;
+}
+
+.bt-text:-ms-input-placeholder {
+  color: rgba(255,255,255,.6);
+  font-size: 1.2em;
+}
+
+
+/**
+ * BT-BUTTON
+ * Set style for bt-button elements
+ */
+
 .bt-button  {
   background-color: white;
   color: #29b8e5;
   cursor: pointer;
 }
 
+.bt-button:hover,
+.bt-button:focus {
+  background-color: rgb(246,246,246);
+}
 
-/* 
+
+/**
  * Style for circle
  */
 
@@ -145,17 +197,18 @@ body {
   background-color: white;
   opacity: .2;
   position: absolute;
+  border-radius: 50%;
+  bottom: -150px;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: animation;
-
-  border-radius: 50%;
 }
 
 .circle-list li:nth-child(1) {
   left: 17%;
   width: 70px;
   height: 70px;
+  animation-delay: 5s;
   animation-duration: 16s;
 }
 
@@ -163,6 +216,7 @@ body {
   left: 34%;
   width: 80px;
   height: 80px;
+  animation-delay: 10s;
   animation-duration: 18s;
 }
 
@@ -170,6 +224,7 @@ body {
   left: 51%;
   width: 80px;
   height: 80px;
+  animation-delay: 15s;
   animation-duration: 22s;
 }
 
@@ -177,6 +232,7 @@ body {
   left: 68%;
   width: 60px;
   height: 60px;
+  animation-delay: 20s;
   animation-duration: 20s;
 }
 
@@ -184,6 +240,7 @@ body {
   left: 85%;
   width: 58px;
   height: 58px;
+  animation-delay: 30s;
   animation-duration: 24s;
 }
 
@@ -191,6 +248,7 @@ body {
   left: 25%;
   width: 32px;
   height: 32px;
+  animation-delay: 30s;
   animation-duration: 30s;
 }
 
@@ -212,6 +270,7 @@ body {
   left: 30%;
   width: 20px;
   height: 20px;
+  animation-delay: 30s;
   animation-duration: 51s;
 }
 
@@ -219,6 +278,7 @@ body {
   left: 70%;
   width: 100px;
   height: 100px;
+  animation-delay: 30s;
   animation-duration: 34s;
 }
 
@@ -231,9 +291,9 @@ body {
 
 @keyframes animation {
   from {
-    bottom: -200px;
+    bottom: -150px;
   }
-  to   {
+  to {
     bottom: 100%;
   }
 }
