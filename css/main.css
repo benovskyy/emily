@@ -1,6 +1,7 @@
 html,
 body {
-  
+  font-family: 'PT Sans', sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 
 * {
@@ -26,7 +27,7 @@ body {
   transition: height .4s;
 }
 
-.login-form {
+.container {
   margin: auto;
   text-align: center;
   width: 300px;
@@ -41,6 +42,36 @@ body {
   margin-top: 80px;
 }
 
+.welcome {
+  color: white;
+  font-size: 2em;
+  position: relative;
+  transition: top .8s;
+  cursor: context-menu;
+  top: 0;
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.welc-down {
+  top: 100px;
+}
+
+.login-form {
+  opacity: 1;
+  transition: visibility .6s, opacity .6s;
+  margin-top: 10px;
+}
+
+.form-disable {
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media screen and (max-width: 700px) {
   .wrapper {
     height: 100%;
@@ -49,11 +80,6 @@ body {
   .login-form {
     top: 20%;
   }
-}
-
-.welcome {
-  color: white;
-  font-size: 2em;
 }
 
 .bt {
@@ -90,9 +116,8 @@ body {
 }
 
 .bt-text::-webkit-input-placeholder {
-  color: rgba(255,255,255,.5);
+  color: rgba(255,255,255,.6);
   font-size: .8em;
-  font-weight: normal;
 }
 
 .bt-button  {
@@ -131,87 +156,77 @@ body {
   left: 17%;
   width: 70px;
   height: 70px;
-  bottom: -200px;
-  animation-duration: 20s;
+  animation-duration: 16s;
 }
 
 .circle-list li:nth-child(2) {
   left: 34%;
   width: 80px;
   height: 80px;
-  animation-duration: 22s;
-  bottom: -455px;
+  animation-duration: 18s;
 }
 
 .circle-list li:nth-child(3) {
   left: 51%;
   width: 80px;
   height: 80px;
-  animation-duration: 26s;
-  bottom: -260px;
+  animation-duration: 22s;
 }
 
 .circle-list li:nth-child(4) {
   left: 68%;
   width: 60px;
   height: 60px;
-  animation-duration: 24s;
-  bottom: -500px;
+  animation-duration: 20s;
 }
 
 .circle-list li:nth-child(5) {
   left: 85%;
   width: 58px;
   height: 58px;
-  animation-duration: 28s;
-  bottom: -280px;
+  animation-duration: 24s;
 }
 
 .circle-list li:nth-child(6) {
   left: 25%;
   width: 32px;
   height: 32px;
-  animation-duration: 34s;
-  bottom: -340px;
+  animation-duration: 30s;
 }
 
 .circle-list li:nth-child(7) {
   left: 60%;
   width: 65px;
   height: 65px;
-  bottom: -290px;
-  animation-duration: 29s;
+  animation-duration: 25s;
 }
 
 .circle-list li:nth-child(8) {
   left: 45%;
   width: 90px;
   height: 90px;
-  bottom: -400px;
-  animation-duration: 40s;
+  animation-duration: 36s;
 }
 
 .circle-list li:nth-child(9) {
   left: 30%;
   width: 20px;
   height: 20px;
-  bottom: -200px;
-  animation-duration: 55s;
+  animation-duration: 51s;
 }
 
 .circle-list li:nth-child(10) {
   left: 70%;
   width: 100px;
   height: 100px;
-  bottom: -380px;
-  animation-duration: 38s;
+  animation-duration: 34s;
 }
 
 .circle-list li:nth-child(11) {
   left: 15%;
   width: 30px;
   height: 30px;
-  animation-duration: 20s;
+  animation-duration: 16s;
 }
 
 @keyframes animation {

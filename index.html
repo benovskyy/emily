@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Emily</title>
-  <link rel="stylesheet" href="css/main.css">
+
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Oxygen:300' rel='stylesheet'>
+
+  <link href="css/main.css" rel="stylesheet">
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/script.js"></script>
 </head>
 <body>
   <div class="wrapper">
-    <form class="login-form" action="">
 
+    <div class="container">
       <p class="welcome">Welcome</p>
-      
-      <input class="bt bt-text" type="text" placeholder="username">
-      <input class="bt bt-text" type="password" placeholder="password">
 
-      <button class="bt bt-button" type="button">Login</button>
-    </form>
+      <form class="login-form">
+        <input class="bt bt-text" type="text" placeholder="username" required>
+        <input class="bt bt-text" type="password" placeholder="password" required>
+
+        <button class="bt bt-button submit-form" type="submit">Login</button>
+      </form>
+    </div>
 
     <ul class="circle-list">
       <li class="circle"></li>
